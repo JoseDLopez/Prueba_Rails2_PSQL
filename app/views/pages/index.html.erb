@@ -1,0 +1,13 @@
+<h1>TRABAJOS REALIZADOS</h1>
+<p>A continuación se visualizará todos los trabajos realizados:</p>
+
+<ul>
+<% @items.each do |i| %>
+	<li>
+		<%= i.description %> |
+		<%= i.category.name %> |
+		<%= i.user.name%>
+		<%= link_to "eliminar", pages_about_path(id: i.id)%>
+	</li>
+<% end %>
+</ul>
